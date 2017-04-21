@@ -2,7 +2,8 @@
 
 # Password Hasing
 
-    This project is all about password hashing and salting. How to hash a password with a Pseudo Random Number Generator(PRNG) salt. How    to store the salted Hash into the database and how to use this hashed password to authenticate a user.
+    This project is all about password hashing and salting. How to hash a password with a Pseudo Random Number Generator(PRNG) salt.
+    How to store the salted Hash into the database and how to use this hashed password to authenticate a user.
 
    # Key Derivation
    # pbkd2f
@@ -15,6 +16,3 @@ The KeyDerivation.Pbkdf2 method supports consuming multiple PRFs (currently HMAC
 
 The KeyDerivation.Pbkdf2 method detects the current operating system and attempts to choose the most optimized implementation of the routine, providing much better performance in certain cases. (On Windows 8, it offers around 10x the throughput of Rfc2898DeriveBytes.)
 The KeyDerivation.Pbkdf2 method requires the caller to specify all parameters (salt, PRF, and iteration count). The Rfc2898DeriveBytes type provides default values for these.
-   
-   
-   
