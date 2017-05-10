@@ -9,7 +9,7 @@
    
    # Microsoft.AspNetCore.Cryptography.KeyDerivation
    
-   * The package currently offers a method KeyDerivation.Pbkdf2 which allows hashing a password using the PBKDF2 algorithm.
+   * The package currently offers a method `KeyDerivation.Pbkdf2` which allows hashing a password using the `PBKDF2` algorithm.
      This API is very similar to the .NET Framework's existing Rfc2898DeriveBytes type, but there are three important distinctions:
      The KeyDerivation.Pbkdf2 method supports consuming multiple PRFs (currently HMACSHA1, HMACSHA256, and HMACSHA512), whereas the Rfc2898DeriveBytes type only supports HMACSHA1.
    
