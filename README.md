@@ -1,6 +1,6 @@
    # HashingAndSalting
    
-    This project is all about password hashing and salting. How to hash a password with a Pseudo Random Number Generator(PRNG) salt.
+      This project is all about password hashing and salting. How to hash a password with a Pseudo Random Number Generator(PRNG) salt.
 
 
   
