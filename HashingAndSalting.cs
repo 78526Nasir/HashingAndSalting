@@ -9,6 +9,7 @@ namespace PasswordAuthentication
 {
     public class HashingAndSalting
     {
+        // This Method will create a Salt.
         public static byte[] CreateSalt()
         {
             // generate a 128-bit salt using a secure Pseudo Random Number Generator
@@ -19,14 +20,20 @@ namespace PasswordAuthentication
             }
             return salt;
         }
-
+        
+        // this method takes the plaintext passowrd.
+        // create a Hash with a Randomly Generated 128-bit Salt
+        // return the salted Hash
         public static String CreateHashingWithSalt(string password)
         {
             byte[] salt = CreateSalt();
             string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(password, salt, KeyDerivationPrf.HMACSHA1, 10000, 256 / 8));
             return hashed;
         }
-
+        
+        // this method takes the plaintext password .
+        // create a salt, return the generated salt by out keyword
+        // also return the generated Salted Hash
         public static String CreateHashingWithSalt(string password,out string saltValue)
         {
             byte[] salt = CreateSalt();
@@ -34,7 +41,9 @@ namespace PasswordAuthentication
             string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(password, salt, KeyDerivationPrf.HMACSHA1, 10000, 256 / 8));
             return hashed;
         }
-
+        
+        // this method takes plaintext password and a Salt.
+        // return a Salted Hash
         public static String CreateHashingWithSalt(string password, string salt)
         {
 
